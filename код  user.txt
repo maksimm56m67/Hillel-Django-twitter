@@ -1,0 +1,43 @@
+      <img
+        class="beer"
+        src="{{ view.image.url }}"
+        alt="Тут была сочная девочка"
+      />
+      <div class="container">
+        <p>{{ user.username }}</p>
+        <p class="AbMe">{{ view.status }}</p>
+        <p class="citata">
+          <q>
+            {{ view.quote }}
+          </q>
+          <br />
+          - {{ view.authorquote }}.
+        </p>
+        <nav>
+          <div class="box">
+            <a target="_blank" href="https://t.me/Maksim_pelmenn">
+              <img src="{% static 'images/icons/telegram.png' %}"
+                alt="telegram"
+                height="50px"
+              />
+            </a>
+          </div>
+          <div class="box1">
+            <a target="_blank" href="https://www.instagram.com/adckiy_pelmenn/">
+              <img
+                src="{% static 'images/icons/instagram.png' %}"
+                alt="instagram"
+                height="50px"
+            /></a>
+          </div>
+          <div class="box2">
+            <a target="_blank" href="https://github.com/maksimm56m67">
+              <img
+                src="{% static 'images/icons/github.png' %}"
+                alt="GitHub"
+                height="50px"
+              />
+            </a>
+          </div>
+        </nav>
+      </div>

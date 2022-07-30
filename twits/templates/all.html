@@ -1,0 +1,16 @@
+
+{% extends 'twitbase.html' %}
+
+{% block TITLE %}
+{{ title }}
+{% endblock TITLE %}
+
+{% block TWITCONTENT %}
+    {%for twit in twits%}
+        <div class="twit">
+            <p class = "content2">user:{{twit.creator.username}}</p>
+            <p class = "content3">{{ twit.content }}</p>
+            <p class= "content1">:{{twit.created_at}}</p>
+        </div>
+    {% endfor %}
+{% endblock TWITCONTENT %}

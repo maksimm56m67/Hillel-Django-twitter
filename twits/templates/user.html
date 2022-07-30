@@ -1,0 +1,75 @@
+{% extends 'userbase.html' %}
+{% load static %}
+{% block TITLE %}
+{{ title }}
+{% endblock TITLE %}
+
+{% block USERCONTENT %}
+      <img
+        class="beer"
+        src="{% static 'images/avatar/Beer.png' %}"
+        alt="Тут была сочная девочка"
+      />
+      <div class="container">
+        <p>{{ user.name }}</p>
+        <p class="AbMe">🌈Умоляю, научите меня пользоваться Django!</p>
+        <p class="citata">
+          <q>
+            Воин великой войны, </br>
+            Чьё имя ведомо богу...
+          </q>
+          <br />
+          - Джин Джон Джан.
+        </p>
+        <nav>
+          <div class="box">
+            <a target="_blank" href="https://t.me/Maksim_pelmenn">
+              <img
+                src="{% static 'images/icons/telegram.png' %}"
+                alt="telegram"
+                height="50px"
+              />
+            </a>
+          </div>
+          <div class="box1">
+            <a target="_blank" href="https://www.instagram.com/adckiy_pelmenn/">
+              <img
+                src="{% static 'images/icons/instagram.png' %}"
+                alt="instagram"
+                height="50px"
+            /></a>
+          </div>
+          <div class="box2">
+            <a target="_blank" href="https://github.com/maksimm56m67">
+              <img
+                src="{% static 'images/icons/github.png' %}"
+                alt="GitHub"
+                height="50px"
+              />
+            </a>
+          </div>
+        </nav>
+      </div>
+
+{% endblock USERCONTENT %}
+
+{% block USERCREATETWIT %}
+<div class = "twit">
+    <form action="{% url 'create_twit' %}" method="post">
+        <p class="content2"> Create Twit</p>
+        {% csrf_token %}
+        {{ twit_form.content }} <br>
+        <button type="submit">Create</button>
+    </form>
+</div>
+{% endblock USERCREATETWIT %}
+
+{% block TWITCONTENTUSER %}
+    {%for twit in user_twits%}
+        <div class="twit">
+            <p class = "content2">user:{{twit.creator.username}}</p>
+            <p class = "content3">{{ twit.content }}</p>
+            <p class= "content1">:{{twit.created_at}}</p>
+        </div>
+    {% endfor %}
+{% endblock TWITCONTENTUSER %}

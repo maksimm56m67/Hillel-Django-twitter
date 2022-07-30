@@ -1,0 +1,17 @@
+{% extends 'authbase.html' %}
+
+{% block TITLE %}
+{{ title }}
+{% endblock TITLE %}
+
+{% block AUTHCONTENT %}
+    <form class="login-form" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <p>имя пользователя: </br>{{ form.username }}</p>
+        <p>пароль пользователя: </br>{{ form.password }}</p>
+        <button type="submit">Login</button>
+        {% if error %}
+            <div class="error"><h2>{{ error }}</h2></div>
+        {% endif %}
+    </form>
+{% endblock AUTHCONTENT %}

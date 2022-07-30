@@ -1,0 +1,57 @@
+body{
+    background-color: #d3cdcd;
+    transition: 1s linear;
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: -50px;
+}
+
+
+svg{
+    margin: 5px;
+    height: 50px;
+}
+
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+
+.twit {
+    background: #ffffff;
+    padding: 2px;
+    margin: 10px;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    word-wrap: break-word;
+    box-shadow: 0px 5px 10px 2px rgb(179, 179, 179);
+}
+
+p {
+    font-family: 'PT Mono', monospace;
+    font-size: 10px;
+    margin: 4px;
+}
+
+.login-form p{
+    font-size: 20px;
+}
+
+.content1{
+    font-size: 15px;
+}
+.content2{
+    font-size: 22px;
+}
+
+a{
+    text-decoration: none;
+}
