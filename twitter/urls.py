@@ -19,7 +19,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('twits/', include('twits.urls')), # http://127.0.0.1:8000/twits
+    path('', include('twits.urls')), # http://127.0.0.1:8000/
     path('admin/', admin.site.urls), # http://127.0.0.1:8000/admin
     path('authorizations/', include('authorizations.urls')), # http://127.0.0.1:8000/authorizations
 ]
